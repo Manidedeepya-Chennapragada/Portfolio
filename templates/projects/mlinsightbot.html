@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <!-- Bootstrap & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Sacramento&family=Alex+Brush&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Navbar Active Section Highlighting -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+        
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - 100) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="logo-text">Manideepya Chennapragada</span>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Section -->
+    <section id="project1" class="project-container">
+        <div class="row">
+            <h2 class="project-title">ML InsightBot AI</h2>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/mlinsightbot.png') }}" class="project-img" alt="MLInsightBot">
+            </div>
+            <div class="col-md-6 project-content">
+                
+                <p class="project-category">Category: AI | Machine Learning | NLP</p>
+                <p class="project-description">
+                    Developed an AI-powered research assistant using LangChain, Llama-2, RAG, and Pinecone Vector Search.
+                </p>
+                <p class="project-description">    
+                    Integrated research papers from arXiv and QASPER into a vector database for faster retrieval. Fine-tuned
+                    LLMs (Llama-2, Mistral 7B) to enhance context relevancy, faithfulness, and accuracy. Built a Streamlit UI
+                    for querying ML concepts and summarizing research. Optimized retrieval pipelines for faster insights and
+                    deployed on AWS/GCP, reducing analysis time by 70%.
+                </p>
+                <a href="https://github.com/" target="_blank" class="project-btn">🔗 View Code</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Responsibilities Section -->
+    <section id="project1" >
+        <h3 class="resp-title"> What have I done?</h3>
+        <p class="r-description">I was responsible for analyzing and visualizing research data, helping fine-tune language models to improve accuracy and relevance in retrieving ML papers. I contributed to designing the system architecture, ensuring smooth integration of vector databases and LLMs for efficient search and retrieval. I also assisted in developing an interactive UI, making it user-friendly, and worked on documentation to clearly outline system workflows, model performance, and deployment strategies.</p>
+    </section>
+
+    <!-- Technology & Datasets Cards -->
+<section class="container mt-3">
+    <div class="row justify-content-center">
+        <!-- Technologies Used -->
+        <h3 class="resp-title">Technologies Used</h3>
+        
+        <div class="row">
+            <!-- Programming & Frameworks -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm tech-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Programming & Frameworks</h5>
+                        <p>Python, LangChain, Streamlit</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning Models -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm tech-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Machine Learning Models</h5>
+                        <p>Llama-2, Mistral 7B, RAG</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database & Storage -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm tech-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Database & Storage</h5>
+                        <p>Pinecone (Vector Database), AWS S3</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud & Deployment -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm tech-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cloud & Deployment</h5>
+                        <p>AWS, GCP</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Big Data & Processing -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm tech-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Big Data & Processing</h5>
+                        <p>Apache Kafka, AWS Glue, Athena</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualization & UI -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm tech-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Visualization & UI</h5>
+                        <p>Tableau, Streamlit</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evaluation Metrics -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm tech-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Evaluation Metrics</h5>
+                        <p>EVALS (Context Relevancy, Faithfulness, Answer Relevancy, Context Recall, Harmfulness)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="container mt-3">
+    <!-- System Architecture -->
+        <div class="project-section mt-3">
+            <h3 class="resp-title">⚙️ System Architecture</h3>
+            <img src="{{ url_for('static', filename='images/system_architecture.png') }}" class="img-fluid rounded shadow-sm" alt="System Architecture">
+            <p>
+                The architecture integrates <strong>RAG framework </strong> with <strong> Fine-Tuning Llama-2 & Mistral LLMs</strong>, ensuring efficient retrieval and question-answering capabilities.
+            </p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center mt-3 p-3 bg-light">
+        <p>© 2024 Manideepya Chennapragada | <a href="{{ url_for('home') }}">Back to Portfolio</a></p>
+    </footer>
+
+    <!-- Scroll Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll("section, .card");
+        
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.3 });
+        
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const projectSection = document.querySelector(".project-container");
+
+        function revealOnScroll() {
+            const sectionTop = projectSection.getBoundingClientRect().top;
+            const triggerHeight = window.innerHeight * 0.8;
+
+            if (sectionTop < triggerHeight) {
+                projectSection.classList.add("show");
+            }
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll(); // Ensure it runs on page load
+    });
+
+    </script>
+
+</body>
+</html>

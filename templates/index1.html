@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Sacramento&family=Alex+Brush&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+        
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - 100) {
+                        current = section.getAttribute("id");
+                    }
+                });
+        
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+        </script>
+        
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <span class="logo-text">Manideepya Chennapragada</span>
+        </a>
+        
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Home Section -->
+<section id="home" class="home-container">
+    <div class="home-content">
+        <h1 class="name-title">Manideepya Chennapragada</h1>
+        <h2 class="subtitle">Data Engineer | Data Scientist | Business Analyst | AI & ML Enthusiast</h2>
+        <p class="home-description">
+            A passionate individual who always thrives to work on <strong>AI-powered analytics, cloud-based data pipelines,</strong> and <strong>scalable ML solutions by transforming <strong>raw data into actionable insights</strong> to drive innovation and efficiency.
+        </p>
+        <div class="home-buttons">
+            <a href="static/resume.pdf" class="btn btn-primary" download> Download Resume</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+    </div>
+    <div class="home-image">
+        <img src="{{ url_for('static', filename='images/home-illustration.png') }}" alt="Data Science Illustration">
+    </div>
+</section>
+
+<!-- Work Experience Section -->
+<section id="experience" class="container">
+    <h2 class="section-heading">Work Experience</h2>
+    <div class="timeline">
+
+        <!-- Job 1 -->
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <img src="{{ url_for('static', filename='images/cfa_logo.png') }}" alt="CFA Technologies">
+            </div>
+            <div class="timeline-content card">
+                <h3 class="timeline-title">Senior Data & AI Engineer</h3>
+                <p class="timeline-subtitle">
+                    <a href="https://www.cfa-technologies.com" target="_blank">CFA Technologies Pvt Ltd</a> | June 2020 - May 2022
+                </p>
+                <p class="timeline-location">Bangalore, India</p>
+                <ul class="timeline-description">
+                    <p>I designed real-time data pipelines to process large-scale transactions efficiently and optimized cloud data warehouses for faster reporting. I worked on machine learning models and automated MLOps workflows for seamless model deployment. I also led cloud migration, improving system reliability while reducing operational costs.</p>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <img src="{{ url_for('static', filename='images/cfa_logo.png') }}" alt="CFA Technologies">
+            </div>
+            <div class="timeline-content card">
+                <h3 class="timeline-title">Data & Analytics Engineer</h3>
+                <p class="timeline-subtitle">
+                    <a href="https://www.cfa-technologies.com" target="_blank">CFA Technologies Pvt Ltd</a> | May 2018 - May 2020
+                </p>
+                <p class="timeline-location">Bangalore, India</p>
+                <ul class="timeline-description">
+                    <p>I built ETL pipelines to streamline data processing and developed interactive dashboards. Optimized database queries for better performance and automated anomaly detection processes to ensure data accuracy by collaborating with teams to improve analytics and decision-making.</p>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills" class="container mt-5">
+    <h2 class="section-heading">Technical Skills</h2>
+
+    <div class="skills-grid">
+        
+        <!-- Programming Languages -->
+        <div class="skill-category-box">
+            <p class="skill-category">Programming Languages</p>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/python.png') }}" class="skill-icon" alt="Python">
+                <p class="skill-title">Python</p>
+                <div class="skill-bar"><div class="skill-progress python" data-progress="95%">95%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/sql.png') }}" class="skill-icon" alt="SQL">
+                <p class="skill-title">SQL</p>
+                <div class="skill-bar"><div class="skill-progress sql" data-progress="90%">90%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/r.png') }}" class="skill-icon" alt="R">
+                <p class="skill-title">R</p>
+                <div class="skill-bar"><div class="skill-progress r" data-progress="80%">80%</div></div>
+            </div>
+        </div>
+
+        <!-- Data Science & ML -->
+        <div class="skill-category-box">
+            <p class="skill-category">Data Science & Machine Learning</p>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/tensorflow.png') }}" class="skill-icon" alt="TensorFlow">
+                <p class="skill-title">TensorFlow</p>
+                <div class="skill-bar"><div class="skill-progress tensorflow" data-progress="85%">85%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/scikit.png') }}" class="skill-icon" alt="Scikit-Learn">
+                <p class="skill-title">Scikit-Learn</p>
+                <div class="skill-bar"><div class="skill-progress scikit" data-progress="90%">90%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/pytorch.png') }}" class="skill-icon" alt="PyTorch">
+                <p class="skill-title">XGBoost</p>
+                <div class="skill-bar"><div class="skill-progress pytorch" data-progress="80%">80%</div></div>
+            </div>
+        </div>
+
+        <!-- Big Data & Cloud -->
+        <div class="skill-category-box">
+            <p class="skill-category">Big Data & Cloud</p>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/aws.png') }}" class="skill-icon" alt="AWS">
+                <p class="skill-title">AWS</p>
+                <div class="skill-bar"><div class="skill-progress aws" data-progress="90%">90%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/gcp.png') }}" class="skill-icon" alt="GCP">
+                <p class="skill-title">Google Cloud</p>
+                <div class="skill-bar"><div class="skill-progress gcp" data-progress="75%">75%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/azure.png') }}" class="skill-icon" alt="Azure">
+                <p class="skill-title">Azure</p>
+                <div class="skill-bar"><div class="skill-progress azure" data-progress="75%">75%</div></div>
+            </div>
+        </div>
+
+        <!-- MLOps & DevOps -->
+<div class="skill-category-box">
+    <p class="skill-category">MLOps & DevOps</p>
+    <div class="skill-container">
+        <img src="{{ url_for('static', filename='images/docker.png') }}" class="skill-icon" alt="Docker">
+        <p class="skill-title">Docker</p>
+        <div class="skill-bar"><div class="skill-progress docker" data-progress="90%">90%</div></div>
+    </div>
+    <div class="skill-container">
+        <img src="{{ url_for('static', filename='images/kubernetes.png') }}" class="skill-icon" alt="Kubernetes">
+        <p class="skill-title">Kubernetes</p>
+        <div class="skill-bar"><div class="skill-progress kubernetes" data-progress="85%">85%</div></div>
+    </div>
+    <div class="skill-container">
+        <img src="{{ url_for('static', filename='images/mlflow.png') }}" class="skill-icon" alt="MLflow">
+        <p class="skill-title">MLflow</p>
+        <div class="skill-bar"><div class="skill-progress mlflow" data-progress="80%">80%</div></div>
+    </div>
+</div>
+
+<!-- Orchestration & Streaming -->
+<div class="skill-category-box">
+    <p class="skill-category">Orchestration & Streaming</p>
+    <div class="skill-container">
+        <img src="{{ url_for('static', filename='images/airflow.png') }}" class="skill-icon" alt="Apache Airflow">
+        <p class="skill-title">Apache Airflow</p>
+        <div class="skill-bar"><div class="skill-progress airflow" data-progress="85%">85%</div></div>
+    </div>
+    <div class="skill-container">
+        <img src="{{ url_for('static', filename='images/kafka.png') }}" class="skill-icon" alt="Kafka">
+        <p class="skill-title">Kafka</p>
+        <div class="skill-bar"><div class="skill-progress kafka" data-progress="90%">90%</div></div>
+    </div>
+    <div class="skill-container">
+        <img src="{{ url_for('static', filename='images/spark.png') }}" class="skill-icon" alt="Spark Streaming">
+        <p class="skill-title">Spark Streaming</p>
+        <div class="skill-bar"><div class="skill-progress spark" data-progress="80%">80%</div></div>
+    </div>
+</div>
+
+
+        <!-- Visualization & BI -->
+        <div class="skill-category-box">
+            <p class="skill-category">Visualization & BI</p>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/tableau.png') }}" class="skill-icon" alt="Tableau">
+                <p class="skill-title">Tableau</p>
+                <div class="skill-bar"><div class="skill-progress tableau" data-progress="90%">90%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/powerbi.png') }}" class="skill-icon" alt="Power BI">
+                <p class="skill-title">Power BI</p>
+                <div class="skill-bar"><div class="skill-progress powerbi" data-progress="85%">85%</div></div>
+            </div>
+            <div class="skill-container">
+                <img src="{{ url_for('static', filename='images/looker.png') }}" class="skill-icon" alt="Looker">
+                <p class="skill-title">Looker</p>
+                <div class="skill-bar"><div class="skill-progress looker" data-progress="75%">75%</div></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container mt-5">
+    <h2 class="section-heading">Projects</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">MLInsightBot AI</h5>
+                    <p class="card-text">Developed an AI-powered research assistant using LangChain, Llama-2, and Pinecone Vector Search...</p>
+                    <a href="{{ url_for('mlinsightbot') }}" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Real-Time Energy Consumption & Pricing Analysis</h5>
+                    <p class="card-text">Built a real-time data pipeline using Kafka & AWS to process EIA data...</p>
+                    <a href="{{ url_for('energy_analysis') }}" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Autonomous Fraud Detection System</h5>
+                    <p class="card-text">Built ML models (Random Forest, Decision Tree, KNN, Logistic Regression)...</p>
+                    <a href="{{ url_for('fraud_detection') }}" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Education Section -->
+<section id="education" class="container mt-5">
+    <h2 class="section-heading">Education</h2>
+
+    <div class="education-container">
+        <!-- Master's Degree -->
+        <div class="education-card">
+            <div class="education-logo">
+                <img src="{{ url_for('static', filename='images/sjsu_logo.png') }}" alt="San Jose State University">
+            </div>
+            <div class="education-content">
+                <div class="education-header">
+                    <h3 class="education-title">Master of Science in Data Analytics</h3>
+                    <span class="education-year">2022 - 2024</span>
+                </div>
+                <p class="education-institution">San Jose State University</p>
+                <ul class="education-details">
+                    <p>Focused on Database Systems, Big Data Processing, Cloud Computing, Advanced SQL, Data Warehousing, and Machine Learning. Gained expertise in designing scalable data pipelines, optimizing query performance, and implementing AI-driven analytics. Developed predictive models for real-world datasets and explored AI & NLP techniques for data automation, enhancing decision-making through data-driven insights.</p>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bachelor's Degree -->
+        <div class="education-card">
+            <div class="education-logo">
+                <img src="{{ url_for('static', filename='images/jntu_logo.png') }}" alt="Jawaharlal Nehru Technological University">
+            </div>
+            <div class="education-content">
+                <div class="education-header">
+                    <h3 class="education-title">Bachelor of Technology in Information Technology</h3>
+                    <span class="education-year">2015 - 2019</span>
+                </div>
+                <p class="education-institution">Jawaharlal Nehru Technological University</p>
+                <ul class="education-details">
+                    <p>Built a strong foundation in software engineering, database management, and data structures. Gained expertise in Python programming, SQL optimization, and cloud technologies for scalable data solutions. Developed database-driven applications and worked in cross-functional teams to design cloud-based architectures, gaining hands-on experience in data processing, ETL pipelines, and business intelligence tools.</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Contact Section -->
+ <section id="contact" class="container mt-5 text-center">
+    <h2>Contact Me</h2>
+    <p>Email: dedeepya26@gmail.com </p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/manidedeepya-chennapragada/">Your LinkedIn</a></p>
+    <p>GitHub: <a href="https://github.com/Manidedeepya-Chennapragada">Your GitHub</a></p>
+</section>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2024 Manideepya - All Rights Reserved</p>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+        </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const projectsSection = document.querySelector("#projects");
+        const sections = document.querySelectorAll("section");
+        const headings = document.querySelectorAll(".section-heading");
+        const projectCards = document.querySelectorAll(".card");
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.3 });
+    
+        sections.forEach(section => observer.observe(section));
+        headings.forEach(heading => observer.observe(heading));
+    
+        projectCards.forEach(card => {
+            observer.observe(card);
+        });
+    });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const skillBars = document.querySelectorAll(".skill-progress");
+    const skillSection = document.getElementById("skills");
+
+    // Function to Animate Progress Bars
+    function animateSkills() {
+        skillBars.forEach((bar) => {
+            if (!bar.classList.contains("animated")) {
+                let finalWidth = bar.getAttribute("data-progress"); // Get skill value
+                bar.style.width = finalWidth; // Set width dynamically
+                bar.classList.add("animated"); // Mark as animated
+            }
+        });
+    }
+
+    // Function to Reset Progress Bars when revisited
+    function resetSkills() {
+        skillBars.forEach((bar) => {
+            bar.style.width = "0"; // Reset width
+            bar.classList.remove("animated"); // Remove animation marker
+        });
+    }
+
+    // Use IntersectionObserver to Trigger Animation on Scroll
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animateSkills(); // Animate when in view
+                } else {
+                    resetSkills(); // Reset animation when out of view
+                }
+            });
+        },
+        { threshold: 0.5 } // Trigger when 50% of the section is in view
+    );
+
+    // Observe the Skills Section
+    if (skillSection) {
+        observer.observe(skillSection);
+        }
+    });
+
+    </script>
+  
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function revealSections() {
+                let sections = document.querySelectorAll("#education, #experience");
+                sections.forEach((section) => {
+                    let windowHeight = window.innerHeight;
+                    let sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < windowHeight - 100) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+            window.addEventListener("scroll", revealSections);
+            revealSections(); // Run on page load in case it's already in view
+        });
+        </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function revealSections() {
+                let sections = document.querySelectorAll(".timeline-item");
+                sections.forEach((section) => {
+                    let windowHeight = window.innerHeight;
+                    let sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < windowHeight - 100) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+            window.addEventListener("scroll", revealSections);
+            revealSections(); // Run on page load in case it's already in view
+        });
+        </script>
+        
+        
+              
+        
+        
+    
+        
+</body>
+</html>

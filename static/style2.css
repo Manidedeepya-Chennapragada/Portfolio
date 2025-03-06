@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #c5f3ed, #9cf3dd);
+    color: rgb(38, 48, 47);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+.name-highlight:hover {
+    text-shadow: 0px 0px 10px #c4e5f1;
+} */
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #1e6c72, #089297);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #e0f7fa;
+}
+
+/* Section Styling */
+section {
+    padding: 80px 10%;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Headings */
+.section-heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #055a5c;
+}
+
+/* Responsibilities */
+.project-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-section ul li {
+    font-size: 16px;
+    padding: 5px 0;
+    font-weight: 500;
+    color: #055a5c;
+    display: flex;
+    align-items: center;
+}
+
+.project-section ul li::before {
+    content: "✔";
+    font-size: 18px;
+    margin-right: 8px;
+    color: #089297;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Equal Card Height */
+.tech-card {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #055a5c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .card {
+        min-height: auto;
+    }
+}
