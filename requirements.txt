@@ -1,1 +1,58 @@
-  a s t t o k e n s = = 3 . 0 . 0   b l i n k e r = = 1 . 9 . 0   c a c h e t o o l s = = 5 . 3 . 0   c e r t i f i = = 2 0 2 2 . 1 2 . 7   c h a r s e t - n o r m a l i z e r = = 3 . 0 . 1   c l i c k = = 8 . 1 . 8   c o l o r a m a = = 0 . 4 . 6   d e b u g p y = = 1 . 8 . 9   d e c o r a t o r = = 5 . 1 . 1   e x c e p t i o n g r o u p = = 1 . 2 . 2   e x e c u t i n g = = 2 . 1 . 0   F l a s k = = 3 . 1 . 0   g o o g l e - a p i - c o r e = = 2 . 1 1 . 0   g o o g l e - a p i - p y t h o n - c l i e n t = = 2 . 8 0 . 0   g o o g l e - a u t h = = 2 . 1 6 . 2   g o o g l e - a u t h - h t t p l i b 2 = = 0 . 1 . 0   g o o g l e a p i s - c o m m o n - p r o t o s = = 1 . 5 8 . 0   h t t p l i b 2 = = 0 . 2 1 . 0   i d n a = = 3 . 4   i t s d a n g e r o u s = = 2 . 2 . 0   J i n j a 2 = = 3 . 1 . 5   j u p y t e r _ c o r e = = 5 . 7 . 2   M a r k u p S a f e = = 3 . 0 . 2   m a t p l o t l i b - i n l i n e = = 0 . 1 . 7   m p m a t h = = 1 . 2 . 1   m y s q l - c o n n e c t o r - p y t h o n = = 8 . 0 . 3 1   n e s t - a s y n c i o = = 1 . 6 . 0   n u m p y = = 1 . 2 4 . 3   p a c k a g i n g = = 2 4 . 2   p a n d a s = = 2 . 0 . 1   p a r s o = = 0 . 8 . 4   p l a t f o r m d i r s = = 4 . 3 . 6   p r o m p t _ t o o l k i t = = 3 . 0 . 4 8   p r o t o b u f = = 4 . 2 2 . 0   p s u t i l = = 6 . 1 . 0   p s y c o p g 2 = = 2 . 9 . 5   p s y c o p g 2 - b i n a r y = = 2 . 9 . 5   p u r e _ e v a l = = 0 . 2 . 3   p y a s n 1 = = 0 . 4 . 8   p y a s n 1 - m o d u l e s = = 0 . 2 . 8   P y g m e n t s = = 2 . 1 8 . 0   p y p a r s i n g = = 3 . 0 . 9   p y t h o n - d a t e u t i l = = 2 . 9 . 0 . p o s t 0   p y t z = = 2 0 2 3 . 3   p y w i n 3 2 = = 3 0 8   p y z m q = = 2 6 . 2 . 0   r e q u e s t s = = 2 . 2 8 . 2   r s a = = 4 . 9   s i x = = 1 . 1 7 . 0   s t a c k - d a t a = = 0 . 6 . 3   s y m p y = = 1 . 1 1 . 1   t o r n a d o = = 6 . 4 . 2   t r a i t l e t s = = 5 . 1 4 . 3   t y p i n g _ e x t e n s i o n s = = 4 . 1 2 . 2   t z d a t a = = 2 0 2 3 . 3   u r i t e m p l a t e = = 4 . 1 . 1   u r l l i b 3 = = 1 . 2 6 . 1 4   w c w i d t h = = 0 . 2 . 1 3   W e r k z e u g = = 3 . 1 . 3   
+asttokens==3.0.0
+blinker==1.9.0
+cachetools==5.3.0
+certifi==2022.12.7
+charset-normalizer==3.0.1
+click==8.1.8
+colorama==0.4.6
+debugpy==1.8.9
+decorator==5.1.1
+exceptiongroup==1.2.2
+executing==2.1.0
+Flask==3.1.0
+google-api-core==2.11.0
+google-api-python-client==2.80.0
+google-auth==2.16.2
+google-auth-httplib2==0.1.0
+googleapis-common-protos==1.58.0
+httplib2==0.21.0
+idna==3.4
+itsdangerous==2.2.0
+Jinja2==3.1.5
+jupyter_core==5.7.2
+MarkupSafe==3.0.2
+matplotlib-inline==0.1.7
+mpmath==1.2.1
+mysql-connector-python==8.0.31
+nest-asyncio==1.6.0
+numpy==1.24.3
+packaging==24.2
+pandas==2.0.1
+parso==0.8.4
+platformdirs==4.3.6
+prompt_toolkit==3.0.48
+protobuf==4.22.0
+psutil==6.1.0
+psycopg2==2.9.5
+psycopg2-binary==2.9.5
+pure_eval==0.2.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+Pygments==2.18.0
+pyparsing==3.0.9
+python-dateutil==2.9.0.post0
+pytz==2023.3
+pyzmq==26.2.0
+requests==2.28.2
+rsa==4.9
+six==1.17.0
+stack-data==0.6.3
+sympy==1.11.1
+tornado==6.4.2
+traitlets==5.14.3
+typing_extensions==4.12.2
+tzdata==2023.3
+uritemplate==4.1.1
+urllib3==1.26.14
+wcwidth==0.2.13
+Werkzeug==3.1.3
