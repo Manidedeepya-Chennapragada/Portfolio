@@ -239,7 +239,7 @@ section {
 
 /* Buttons */
 .home-buttons {
-    display: flex;
+    display: center;
     gap: 15px;
     flex-wrap: wrap; /* Allows buttons to move in smaller screens */
 }
